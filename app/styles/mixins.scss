@@ -26,7 +26,6 @@
   background: $image;
 };
 
-
 /* media queries */
 @mixin bp($point) {
     @if $point == medium {
@@ -42,3 +41,10 @@
       @media (min-width: 769px)  { @content; }
   }
 }
+
+@mixin schedule-arrow($image) {
+	width:30px;
+	height:30px;
+	border:0px;
+	background: $image;
+};
