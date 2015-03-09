@@ -8,22 +8,23 @@
 
 /* layout */
 @mixin container-int {
-  max-width: $container;
-  width: 100%;
-  display: flex;
-  margin: auto;
+    max-width: $container;
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    margin: auto;
 }
 
 @mixin container-ext {
-  display:flex;
-  flex: 1;
-  justify-content: center;
+    display:flex;
+    flex: 1;
+    justify-content: center;
 };
 
 
 /* speakers */
 @mixin social-button($image) {
-  background: $image;
+    background: $image;
 };
 
 /* media queries */
@@ -43,8 +44,8 @@
 }
 
 @mixin schedule-arrow($image) {
-	width:30px;
-	height:30px;
-	border:0px;
-	background: $image;
+    width:30px;
+    height:30px;
+    border:0px;
+    background: $image;
 };
