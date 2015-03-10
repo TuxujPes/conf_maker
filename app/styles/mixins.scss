@@ -57,3 +57,13 @@
     color:$color__gray--darken;
     margin-top: -7px;
 };
+<<<<<<< HEAD
+=======
+
+@mixin user-select() {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+};
+>>>>>>> added type to session object in schedule
