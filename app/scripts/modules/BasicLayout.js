@@ -54,6 +54,8 @@ var LayoutBasic = React.createClass({
 =======
 >>>>>>> Added modules array to config. Improved basicLayout to render modules due to config file. Replaced module  wrappers from basicLayout to aproppriate module files. Fixed and improved on scroll function. Improved styles for menu. Created footer module and aproppriate scss file. Created Overview module.
 
+var Registration = require('./Registration');
+
 var LayoutBasic = React.createClass({
   render: function() {
     return (
