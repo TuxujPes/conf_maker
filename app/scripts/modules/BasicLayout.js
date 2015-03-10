@@ -1,3 +1,4 @@
+
 'use strict';
 
 var React = require('react');
@@ -31,6 +32,8 @@ var reactModules = {
 var modulesToRender = configModules.map(function(item) {
   return reactModules[item];
 });
+
+var Registration = require('./Registration');
 
 var LayoutBasic = React.createClass({
   render: function() {
