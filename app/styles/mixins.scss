@@ -49,3 +49,11 @@
     border:0px;
     background: $image;
 };
+
+@mixin schedule-about-button($content) {
+    content:$content;
+    display:block;
+    font-size:$font__giant;
+    color:$color__gray--darken;
+    margin-top: -7px;
+};
