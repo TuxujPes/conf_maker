@@ -19,7 +19,7 @@ var config = (function() {
         order: 4
       },
       {
-        title: 'shedule',
+        title: 'schedule',
         isRendering: true,
         order: 5
       },

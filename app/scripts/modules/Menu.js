@@ -39,7 +39,7 @@ var Menu = React.createClass({
         <nav id="cm_menuItems" className={menuCls}>
             <a href="#overview" className="menu__item" onClick={this.menuLinkHandler}>Overview</a>
             <a href="#speakers" className="menu__item" onClick={this.menuLinkHandler}>Speakers</a>
-            <a href="#shedule" className="menu__item" onClick={this.menuLinkHandler}>Shedule</a>
+            <a href="#schedule" className="menu__item" onClick={this.menuLinkHandler}>Shedule</a>
             <a href="#location" className="menu__item" onClick={this.menuLinkHandler}>Location</a>
             <a href="#registration" className="menu__item" onClick={this.menuLinkHandler}>Registration</a>
             <a href="#partners" className="menu__item" onClick={this.menuLinkHandler}>Partners</a>
