@@ -36,7 +36,17 @@ var modulesToRender = configModules.map(function(item) {
 });
 
 var LayoutBasic = React.createClass({
+    getInitialState: function() {
+    return {
+      modules: config.modules
+    }
+  },
+
   render: function() {
+    var modulesToRender = this.state.modules.map(function(module) {
+      return <Modules key={module.title} data={module} />
+    });
+
     return (
       <div className="page-wrap">
         <Header />
