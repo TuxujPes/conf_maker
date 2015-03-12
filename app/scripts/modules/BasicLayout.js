@@ -34,9 +34,42 @@ var modulesToRender = configModules.map(function(item) {
 });
 
 var Registration = require('./Registration');
+var config = require('../config');
+
+var Modules = React.createClass({
+  getInitialState: function() {
+    return {
+      moduleFiles: {
+        location: <LocationMap />,
+        speakers: <Speakers />,
+        partners: <Partners />,
+        schedule: <Schedule />
+      }
+    }
+  },
+
+  render: function() {
+    return (
+      <section id={this.props.data.title} className="page-wrap">
+        <h2 className="module-header">{this.props.data.title}</h2>
+        {this.state.moduleFiles[this.props.data.title]}
+      </section>
+    );
+  }
+});
 
 var LayoutBasic = React.createClass({
+    getInitialState: function() {
+    return {
+      modules: config.modules
+    }
+  },
+
   render: function() {
+    var modulesToRender = this.state.modules.map(function(module) {
+      return <Modules key={module.title} data={module} />
+    });
+
     return (
       <div className="page-wrap">
         <Header />
