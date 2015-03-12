@@ -7,6 +7,7 @@ var config = (function() {
       speakers: './dev/json/speakers.json',
       partners: './dev/json/partners.json'
     },
+    firebasePath: 'https://blistering-fire-6843.firebaseio.com/users',
     modules: [
       {
         title: 'overview',
@@ -22,7 +23,7 @@ var config = (function() {
         title: 'schedule',
         isRendering: true,
         order: 3
-      },
+    },
       {
         title: 'location',
         isRendering: true,
@@ -39,7 +40,7 @@ var config = (function() {
         order: 6
       }
     ],
-    firebasePath: 'https://blistering-fire-6843.firebaseio.com/users'
+  }
 })()
 
 module.exports = config;
