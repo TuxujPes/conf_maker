@@ -23,6 +23,7 @@
 	background: $color__primary--dark;
 	color: $color__heading--menu;
 	font-size: 2em;
+	text-transform: capitalize;
 }
 
 h1 {
@@ -38,10 +39,10 @@ h1 {
 	display:none
 }
 
-/*  
+/*
 this is test styles and should be deleted
 every module which would be instead of .container
-should contain @include container-int; 
+should contain @include container-int;
 */
 .container,
  {
@@ -49,4 +50,3 @@ should contain @include container-int;
 	border: 3px $color__primary solid;
 	height: 400px;
 }
-
