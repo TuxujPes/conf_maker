@@ -6,39 +6,7 @@ var config = (function() {
       schedule: './dev/json/schedule.json',
       speakers: './dev/json/speakers.json',
       partners: './dev/json/partners.json'
-    },
-    modules: [
-      {
-        title: 'overview',
-        isRendering: false,
-        order: 3
-      },
-      {
-        title: 'speakers',
-        isRendering: true,
-        order: 4
-      },
-      {
-        title: 'schedule',
-        isRendering: true,
-        order: 5
-      },
-      {
-        title: 'location',
-        isRendering: true,
-        order: 6
-      },
-      {
-        title: 'registration',
-        isRendering: false,
-        order: 7
-      },
-      {
-        title: 'partners',
-        isRendering: true,
-        order: 8
-      }
-    ]
+    }
   }
 })()
 

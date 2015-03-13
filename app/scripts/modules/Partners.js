@@ -1,8 +1,8 @@
 'use strict';
 
 var React = require('react');
-var config = require('../config');
 var utilities = require('../utilities');
+var config = require('../config');
 
 var Partners = React.createClass({
   componentDidMount: function() {
