@@ -10,32 +10,7 @@ var Partners = require('./Partners');
 var Schedule = require('./Schedule');
 var Footer = require('./Footer');
 var Overview = require('./Overview');
-var config = require('../config');
-
-var configModules = [];
-config.modules.map(function(item) {
-  if (item.isRendering) {
-    return configModules.splice(item.order, 0, item.title);
-  } else {
-    return;
-  }
-});
-
-var reactModules = {
-  overview: <Overview />,
-  speakers: <Speakers />,
-  schedule: <Schedule />,
-  location: <LocationMap />,
-  partners: <Partners />,
-  footer: <Footer />
-};
-var modulesToRender = configModules.map(function(item) {
-  return reactModules[item];
-});
-
 var Registration = require('./Registration');
-var Footer = require('./Footer');
-var Overview = require('./Overview');
 var config = require('../config');
 
 var configModules = [];
@@ -49,6 +24,7 @@ config.modules.map(function(item) {
 
 var reactModules = {
   overview: <Overview />,
+  registration: <Registration />,
   speakers: <Speakers />,
   schedule: <Schedule />,
   location: <LocationMap />,
