@@ -10,7 +10,7 @@ var config = (function() {
     modules: [
       {
         title: 'overview',
-        isRendering: true,
+        isRendering: false,
         order: 3
       },
       {
@@ -30,7 +30,7 @@ var config = (function() {
       },
       {
         title: 'registration',
-        isRendering: true,
+        isRendering: false,
         order: 7
       },
       {

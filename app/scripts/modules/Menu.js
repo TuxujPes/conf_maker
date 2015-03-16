@@ -27,6 +27,10 @@ var Menu = React.createClass({
   render: function() {
     var menuCls = this.state.active ? 'menu menu--visible' : 'menu';
     var darkCls = this.state.active ? 'darkenScreen--hidden darkenScreen--visible' : 'darkenScreen--hidden';
+
+    var itemsToRender = this.props.items.map(function(data) {
+      return <a href={'#' + data} className="menu__item" onClick={this.menuLinkHandler}>{data}</a>
+    });
     return (
       <div className="menu-wrapper">
         <div id="cm_toggleWrapper" className="toggleWrapper">
@@ -37,18 +41,19 @@ var Menu = React.createClass({
           </div>
         </div>
         <nav id="cm_menuItems" className={menuCls}>
-            <a href="#overview" className="menu__item" onClick={this.menuLinkHandler}>Overview</a>
-            <a href="#speakers" className="menu__item" onClick={this.menuLinkHandler}>Speakers</a>
-            <a href="#schedule" className="menu__item" onClick={this.menuLinkHandler}>Shedule</a>
-            <a href="#location" className="menu__item" onClick={this.menuLinkHandler}>Location</a>
-            <a href="#registration" className="menu__item" onClick={this.menuLinkHandler}>Registration</a>
-            <a href="#partners" className="menu__item" onClick={this.menuLinkHandler}>Partners</a>
+          {itemsToRender}
         </nav>
         <div id="cm_darkenScreen" className={darkCls} onClick={this.toggleMenu}></div>
       </div>
     );
   }
 });
+
+//var Item = React.createClass({
+//  render: function() {
+//    return <a href={'#' + this.props.text} className="menu__item" onClick={this.menuLinkHandler}>{this.props.text}</a>
+//  }
+//});
 
 //fix menu when scrolling os make static due to window.pageYOffset
 window.onscroll = function() {

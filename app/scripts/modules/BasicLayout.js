@@ -9,6 +9,8 @@ var Partners = require('./Partners');
 var Schedule = require('./Schedule');
 var config = require('../config');
 
+var menuItems = [];
+
 var Modules = React.createClass({
   getInitialState: function() {
     return {
@@ -22,19 +24,25 @@ var Modules = React.createClass({
   },
 
   render: function() {
-    return (
-      <section id={this.props.data.title} className="page-wrap">
-        <h2 className="module-header">{this.props.data.title}</h2>
-        {this.state.moduleFiles[this.props.data.title]}
-      </section>
-    );
+    if (this.props.data.isRendering) {
+      menuItems.push(this.props.data.title);
+      return (
+        <section id={this.props.data.title} className="page-wrap">
+          <h2 className="module-header">{this.props.data.title}</h2>
+          {this.state.moduleFiles[this.props.data.title]}
+        </section>
+      );
+    } else {
+      return <div className="rejected-module"></div>
+    }
   }
 });
 
 var LayoutBasic = React.createClass({
     getInitialState: function() {
     return {
-      modules: config.modules
+      modules: config.modules,
+      menuItems: menuItems
     }
   },
 
@@ -49,7 +57,7 @@ var LayoutBasic = React.createClass({
           <Header />
         </header>
         <div id="menu" className="module-wrapper">
-          <Menu />
+          <Menu items={this.state.menuItems} />
         </div>
 
         {modulesToRender}
