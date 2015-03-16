@@ -9,9 +9,14 @@ var Registration = React.createClass({
   },
   render: function() {
     return (
-      <div className="registration">
-        <RegistrationForm onDataReceived={this.pushData}/>
-      </div>
+      <section id="registration" className="page-wrap">
+      <h2 className="module-header">Registration</h2>
+        <div className="container">
+          <div className="registration">
+            <RegistrationForm onDataReceived={this.pushData}/>
+          </div>
+        </div>
+      </section>
     )
   }
 });
