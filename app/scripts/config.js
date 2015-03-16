@@ -38,7 +38,8 @@ var config = (function() {
         isRendering: true,
         order: 6
       }
-    ]
+    ],
+    firebasePath: 'https://blistering-fire-6843.firebaseio.com/users'
   }
 })()
 
