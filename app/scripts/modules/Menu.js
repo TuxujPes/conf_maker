@@ -51,12 +51,6 @@ var Menu = React.createClass({
   }
 });
 
-//var Item = React.createClass({
-//  render: function() {
-//    return <a href={'#' + this.props.text} className="menu__item" onClick={this.menuLinkHandler}>{this.props.text}</a>
-//  }
-//});
-
 //fix menu when scrolling os make static due to window.pageYOffset
 window.onscroll = function() {
   var menu = document.getElementById('menu');
