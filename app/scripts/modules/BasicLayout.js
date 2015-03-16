@@ -5,12 +5,12 @@ var React = require('react');
 var Header = require('./Header');
 var Menu = require('./Menu');
 var LocationMap = require('./LocationMap');
-var Speakers = require('./Speakers');
-var Partners = require('./Partners');
-var Schedule = require('./Schedule');
+var Speakers = require('./Speakers.jsx');
+var Partners = require('./Partners.js');
+var Schedule = require('./Schedule.jsx');
+var Registration = require('./Registration.jsx');
 var Footer = require('./Footer');
 var Overview = require('./Overview');
-var Registration = require('./Registration');
 var config = require('../config');
 
 var configModules = [];
