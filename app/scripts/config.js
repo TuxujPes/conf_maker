@@ -23,7 +23,7 @@ var config = (function() {
         title: 'schedule',
         isRendering: true,
         order: 3
-    },
+      },
       {
         title: 'location',
         isRendering: true,
@@ -39,7 +39,7 @@ var config = (function() {
         isRendering: true,
         order: 6
       }
-    ],
+    ]
   }
 })()
 
