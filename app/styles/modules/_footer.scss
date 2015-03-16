@@ -1,0 +1,16 @@
+@import '../variables';
+@import '../mixins';
+
+.footer {
+  background: $color__primary--dark;
+}
+
+.footer__container {
+  @include container-int;
+}
+
+.footer__par {
+  color: $color__heading--menu;
+  font-size: $font__small;
+  padding: 35px 0 35px 0;
+}

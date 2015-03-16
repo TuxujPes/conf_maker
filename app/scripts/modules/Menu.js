@@ -29,37 +29,33 @@ var Menu = React.createClass({
     var darkCls = this.state.active ? 'darkenScreen--hidden darkenScreen--visible' : 'darkenScreen--hidden';
 
     var itemsToRender = this.props.items.map(function(data) {
-      return <a href={'#' + data} className="menu__item" onClick={this.menuLinkHandler}>{data}</a>
-    });
+      return <a href={'#' + data} key={data} className="menu__item" onClick={this.menuLinkHandler}>{data}</a>
+    }.bind(this));
     return (
-      <div className="menu-wrapper">
-        <div id="cm_toggleWrapper" className="toggleWrapper">
-          <div id="cm_menuToggle" className="menuToggle" onClick={this.toggleMenu}>
-            <div className="menuToggle__stripe"></div>
-            <div className="menuToggle__stripe"></div>
-            <div className="menuToggle__stripe"></div>
+      <div id="menu" className="module-wrapper">
+        <div className="menu-wrapper">
+          <div id="cm_toggleWrapper" className="toggleWrapper">
+            <div id="cm_menuToggle" className="menuToggle" onClick={this.toggleMenu}>
+              <div className="menuToggle__stripe"></div>
+              <div className="menuToggle__stripe"></div>
+              <div className="menuToggle__stripe"></div>
+            </div>
           </div>
+          <nav id="cm_menuItems" className={menuCls}>
+            {itemsToRender}
+          </nav>
+          <div id="cm_darkenScreen" className={darkCls} onClick={this.toggleMenu}></div>
         </div>
-        <nav id="cm_menuItems" className={menuCls}>
-          {itemsToRender}
-        </nav>
-        <div id="cm_darkenScreen" className={darkCls} onClick={this.toggleMenu}></div>
       </div>
     );
   }
 });
 
-//var Item = React.createClass({
-//  render: function() {
-//    return <a href={'#' + this.props.text} className="menu__item" onClick={this.menuLinkHandler}>{this.props.text}</a>
-//  }
-//});
-
 //fix menu when scrolling os make static due to window.pageYOffset
 window.onscroll = function() {
   var menu = document.getElementById('menu');
   var header = document.getElementById('header');
-  var overview = document.getElementById('overview');
+  var afterMenu = document.querySelector('#menu + section');
   var pageScroll = window.pageYOffset;
   var menuStyle = menu.style;
   var manuHeight = menu.offsetHeight;
@@ -69,10 +65,10 @@ window.onscroll = function() {
     menuStyle.position = 'fixed';
     menuStyle.width = '100%';
     menuStyle.top = '0';
-    overview.style.paddingTop = menu.offsetHeight + 'px';
+    afterMenu.style.paddingTop = menu.offsetHeight + 'px';
   } else {
     menuStyle.position = 'static';
-    overview.style.paddingTop = '0px';
+    afterMenu.style.paddingTop = '0px';
   }
 };
 

@@ -21,9 +21,12 @@ var Speakers = React.createClass({
     });
 
     return (
-     <div className="speakers">
-      {speakers}
-     </div>
+      <section id="speakers" className="page-wrap">
+        <h2 className="module-header">Speakers</h2>
+        <div className="speakers">
+          {speakers}
+        </div>
+      </section>
     );
   }
 });
@@ -41,18 +44,18 @@ var Speaker = React.createClass({
         <div className="speaker__about">{this.props.information.about}</div>
           <div className="speaker__contacts">
             <a className={this.props.information.contact[0].twitter ?
-              "speaker__contact speaker__contact--twitter ":"invisible"} 
+              "speaker__contact speaker__contact--twitter ":"invisible"}
               href={this.props.information.contact[0].twitter}>
             </a>
-            <a className={this.props.information.contact[0].facebook ? 
-              "speaker__contact speaker__contact--facebook":"invisible"} 
+            <a className={this.props.information.contact[0].facebook ?
+              "speaker__contact speaker__contact--facebook":"invisible"}
               href={this.props.information.contact[0].facebook}>
-            </a> 
-            <a className={this.props.information.contact[0].linkedin ? 
-              "speaker__contact speaker__contact--linkedin":"invisible"} 
+            </a>
+            <a className={this.props.information.contact[0].linkedin ?
+              "speaker__contact speaker__contact--linkedin":"invisible"}
               href={this.props.information.contact[0].linkedin}>
-            </a> 
-          </div> 
+            </a>
+          </div>
         </div>
      </div>
     )

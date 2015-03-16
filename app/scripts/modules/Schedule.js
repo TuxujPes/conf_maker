@@ -20,9 +20,13 @@ var Schedule = React.createClass({
       return (<Conference key={conference.name} days={conference.days} name={conference.name} />)
     });
     return (
-      <div className="schedule">
-        {conferences}
-      </div>
+      <section id="schedule" className="page-wrap">
+        <h2 className="module-header">Schedule</h2>
+        <div className="schedule">
+          {conferences}
+        </div>
+      </section>
+
     );
   }
 });
@@ -47,7 +51,7 @@ var Conference = React.createClass({
   render: function() {
     var days = this.props.days.map(function(day) {
       return (
-        <li onClick={this.changeTab.bind(null, day)} key={day.day_id} 
+        <li onClick={this.changeTab.bind(null, day)} key={day.day_id}
           className={(this.state.activeDay==day.day_id) ? "conference__tab--active" : null}>
           <span>{day.day_name}</span>
         </li>
@@ -61,7 +65,7 @@ var Conference = React.createClass({
       <div className="conference">
         <div className="conference__title">
           <h3>Shedule: {this.props.name}</h3>
-          <input type="button" onClick={this.changeConfRepresent} 
+          <input type="button" onClick={this.changeConfRepresent}
             className={this.state.confIsVisible ? "up-arrow" : "down-arrow"}/>
         </div>
         {this.state.confIsVisible ? <ul>{days}</ul> : null}

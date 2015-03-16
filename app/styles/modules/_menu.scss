@@ -57,6 +57,7 @@
 	display: block;
 	list-style:none;
 	font-size: $font__giant;
+	text-transform: capitalize;
 	color: $color__heading--menu;
 	padding: $item__padding--top-bottom $item__padding--left-right;
 	transition: all 0.2s;
