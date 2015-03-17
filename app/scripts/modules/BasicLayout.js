@@ -42,7 +42,6 @@ var LayoutBasic = React.createClass({
     }
   },
 
-var LayoutBasic = React.createClass({
   render: function() {
     return (
       <div className="page-wrap">

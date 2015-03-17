@@ -7,7 +7,9 @@ var config = (function() {
       speakers: './dev/json/speakers.json',
       partners: './dev/json/partners.json'
     },
+
     firebasePath: 'https://blistering-fire-6843.firebaseio.com/users',
+    
     modules: [
       {
         title: 'overview',
