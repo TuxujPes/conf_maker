@@ -49,12 +49,6 @@ var LayoutBasic = React.createClass({
         <Menu items={configModules} />
           { modulesToRender }
         <Footer />
-        // <section id="registration" className="page-wrap">
-        // <h2 className="module-header">Registration</h2>
-        //   <div className="container">
-        //     here to be inserted registration module
-        //   </div>
-        // </section>
       </div>
     );
   }
