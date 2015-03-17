@@ -9,7 +9,7 @@ var config = (function() {
     },
 
     firebasePath: 'https://blistering-fire-6843.firebaseio.com/users',
-    
+
     modules: [
       {
         title: 'overview',
