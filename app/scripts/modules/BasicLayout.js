@@ -2,15 +2,15 @@
 'use strict';
 
 var React = require('react');
-var Header = require('./Header');
-var Menu = require('./Menu');
-var LocationMap = require('./LocationMap');
+var Header = require('./Header.js');
+var Menu = require('./Menu.js');
+var LocationMap = require('./LocationMap.js');
 var Speakers = require('./Speakers.jsx');
 var Partners = require('./Partners.js');
 var Schedule = require('./Schedule.jsx');
+var Footer = require('./Footer.js');
+var Overview = require('./Overview.js');
 var Registration = require('./Registration.jsx');
-var Footer = require('./Footer');
-var Overview = require('./Overview');
 var config = require('../config');
 
 var configModules = [];

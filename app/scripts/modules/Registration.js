@@ -5,10 +5,8 @@ var Registration = React.createClass({
     return (
       <section id="registration" className="page-wrap">
       <h2 className="module-header">Registration</h2>
-        <div className="container">
-          <div className="registration">
-            <RegistrationForm onDataReceived={this.pushData}/>
-          </div>
+        <div className="registration">
+          <RegistrationForm onDataReceived={this.pushData}/>
         </div>
       </section>
     )
