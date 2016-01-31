@@ -4,7 +4,7 @@ var React = require('react');
 var config = require('../config');
 var utilities = require('../utilities');
 var classNames = require('classnames');
-var SocialIconLink = require('../components/socials.jsx');
+var SocialIconLink = require('../components/socials');
 var files = require('../db_connector');
 
 var Speakers = React.createClass({

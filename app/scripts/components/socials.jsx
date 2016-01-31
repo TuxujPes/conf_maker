@@ -1,7 +1,7 @@
 'use strict';
 
 var React = require('react');
-var UiComp = require('./ui_components.jsx')
+var UiComp = require('./ui_components')
 
 var SocialIconLink = React.createClass({
   render: function() {

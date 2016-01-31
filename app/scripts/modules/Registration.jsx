@@ -1,5 +1,5 @@
 var React = require('react');
-var InputField = require('../components/input.jsx');
+var InputField = require('../components/input');
 var config = require('../config');
 var utilities = require('../utilities');
 var files = require('../db_connector');
